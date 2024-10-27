@@ -9,7 +9,11 @@ const Loader = () => {
             <div className="fish-icon">
                 <IoFish />
             </div>
-            <h2>Shaktidhar</h2>
+            <h2
+            style={{
+                marginTop:"-1em"
+            }}
+            >Shaktidhar</h2>
         </div>
     );
 };

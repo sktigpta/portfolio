@@ -11,7 +11,7 @@ const App = () => {
         // Simulate a loading period
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 1000);
+        }, 2000);
 
         return () => clearTimeout(timer); // Cleanup the timer
     }, []);
