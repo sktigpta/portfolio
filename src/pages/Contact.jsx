@@ -14,7 +14,7 @@ function Contact() {
             marginBottom:"1em"
         }}>
             <p>
-                Please fill out the form below, and we'll get back to you as soon as
+                Please fill out the form below, and I'll get back to you as soon as
                 possible.
             </p>
             <button onClick={openGoogleForm}>
