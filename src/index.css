@@ -11,6 +11,10 @@ body{
     background-color: #181C14;
 }
 
+h1{
+    font-size: 3em;
+}
+
 h1,
 h2,
 h3 {

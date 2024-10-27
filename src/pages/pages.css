@@ -1,5 +1,3 @@
-/* pages.css */
-
 /* Container for all pages */
 .pages {
     width: 90%;
@@ -9,18 +7,16 @@
     position: relative;
 }
 
-/* Hero section with rounded corners and overflow control */
 .hero {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     border-radius: 20px;
     overflow: hidden;
 }
 
-/* Project section with responsive grid layout */
 .project-section {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+    grid-template-columns: repeat(4, 1fr);
     gap: 1em;
     width: 100%;
     margin-top: 2em;
@@ -38,31 +34,42 @@
     align-items: center;
 }
 
-.title{
+.title {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.title h1{
+.title h1 {
     margin-top: 0;
     font-family: "Smooch";
     font-size: 10em;
     color: white;
 }
 
-/* Individual project card styling */
+.round button {
+    padding: .2em .7em;
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    background-color: #697565;
+    cursor: pointer;
+}
+
 .project-card {
     width: 100%;
-    max-width: 300px; /* Control card size */
+    max-width: 300px;
     overflow: hidden;
     border-radius: 0.5em;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
 }
 
-/* Styling for each item */
 .project-card .item {
     border-radius: 0.5em;
     height: 40vh;
@@ -78,7 +85,15 @@
     transition: transform 0.3s ease-in-out;
 }
 
-/* Title and description styling with text shadow */
+.profile-picture {
+    display: none;
+    margin-top: -8em;
+    width: 100%;
+    height: 20em;
+    background: #000;
+    border-radius: 0.5em;
+}
+
 .item-desc {
     margin: 0 0 0 -1em;
     padding: 0.5em;
@@ -92,23 +107,19 @@
 .item-desc h3 {
     margin: 0;
     font-size: 1.3em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for clarity */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .item-desc p {
     margin-top: 0.5em;
     font-size: .8em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Text shadow for description */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* Hover effect: grow and add shadow */
 .project-card:hover {
     transform: scale(1.05);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px;
 }
-
-
-
 
 .skills-container {
     padding: 2em;
@@ -120,55 +131,55 @@
 
 .skills-grid {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping of cards */
-    gap: 1em; /* Space between cards */
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: center;
 }
 
 .skill-card {
-    background-color: #697565; /* Light background for cards */
+    background-color: #697565;
     padding: 1em;
-    width: 150px; /* Fixed width for cards */
+    width: 150px;
     border-radius: 0.5em;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    text-align: center; /* Center align text */
-    transition: transform 0.2s; /* Smooth scaling effect */
+    text-align: center;
+    transition: transform 0.2s;
 }
 
 .skill-card:hover {
-    transform: scale(1.05); /* Slightly increase size on hover */
+    transform: scale(1.05);
 }
 
 .skill-header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0.5em; /* Space between icon and progress bar */
+    margin-bottom: 0.5em;
 }
 
 .skill-icon {
-    margin-right: 0.5em; /* Space between icon and text */
+    margin-right: 0.5em;
 }
 
 .progress-bar {
-    background-color: #e0e0e0; /* Background for the progress bar */
+    background-color: #e0e0e0;
     border-radius: 0.5em;
-    height: 10px; /* Height of the progress bar */
-    overflow: hidden; /* Ensure progress doesn't overflow */
-    margin-bottom: 0.5em; /* Space below the progress bar */
+    height: 10px;
+    overflow: hidden;
+    margin-bottom: 0.5em;
 }
 
 .progress {
-    background-color: #4caf50; /* Green color for progress */
-    height: 100%; /* Full height */
-    border-radius: 0.5em; /* Rounded corners for progress */
+    background-color: #4caf50;
+    height: 100%;
+    border-radius: 0.5em;
 }
 
 .skill-level {
-    font-weight: bold; /* Make percentage bold */
+    font-weight: bold;
 }
 
-
-.form-placeholder{
+.form-placeholder {
     padding: 5em;
     background-color: #3C3D37;
     display: flex;
@@ -178,23 +189,62 @@
     align-items: center;
 }
 
-button{
+button {
     margin-top: 2em;
     border-radius: 18px;
     padding: 1em 5em;
     border: none;
-font-size: 1em;
+    font-size: 1em;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
-    .project-section {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .project-section {}
 }
 
 @media (max-width: 768px) {
+    .hero {
+        height: 80vh;
+    }
+
+    .title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title h1 {
+        margin-top: -.5em;
+        font-family: "Smooch";
+        font-size: 5em;
+        color: white;
+    }
+
+    .hero-btn {
+        margin-top: -0.1em;
+    }
+
     .project-section {
+        width: 100%;
         grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        width: 35%;
+    }
+
+    .project-card {
+        min-width: 100%;
+    }
+
+    .profile-picture {
+        display: flex;
+        overflow: hidden;
+    }
+
+    .profile-picture img {
+        display: flex;
+        width: 100%;
+        object-fit: cover;
     }
 }

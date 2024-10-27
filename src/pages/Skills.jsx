@@ -2,12 +2,12 @@
 
 import React from 'react';
 import './pages.css'; // Include your CSS
-import { 
-    FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt, FaJs, 
-    FaJava, FaAws, FaWordpress 
+import {
+    FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt, FaJs,
+    FaJava, FaAws, FaWordpress
 } from 'react-icons/fa';
-import { 
-    SiMongodb, SiVisualstudiocode, SiCanva, SiMicrosoftexcel 
+import {
+    SiMongodb, SiVisualstudiocode, SiCanva, SiMicrosoftexcel
 } from 'react-icons/si';
 
 const skillCategories = {
@@ -41,7 +41,7 @@ const skillCategories = {
 
 function Skills() {
     return (
-        <div className="pages">
+        <>
             <div className="skills-container">
                 <h1>My Skills</h1>
                 {Object.entries(skillCategories).map(([category, skills], catIndex) => (
@@ -59,7 +59,7 @@ function Skills() {
                                             className="progress"
                                             style={{ width: `${skill.level}%` }}
                                         >
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@ function Skills() {
                     </div>
                 ))}
             </div>
-        </div>
+        </>
     );
 }
 

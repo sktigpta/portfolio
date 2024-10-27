@@ -37,7 +37,7 @@ const projects = [
 
 function Projects() {
     return (
-        <div className="pages">
+        <>
             <h1>Projects</h1>
             <div className="project-section">
                 {projects.map((project) => (
@@ -66,7 +66,7 @@ function Projects() {
                     </div>
                 ))}
             </div>
-        </div>
+        </>
     );
 }
 
