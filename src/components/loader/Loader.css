@@ -1,0 +1,40 @@
+/* Loader.css */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background: #ffffff; /* White background */
+  overflow: hidden; /* Hide overflow for the jumping effect */
+  position: relative; /* Allow absolute positioning for the fish */
+}
+
+.fish {
+  width: 30px;
+  height: 15px;
+  background: orange;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%; /* Center the fish horizontally */
+  bottom: 50%; /* Start in the middle vertically */
+  transform: translateX(-50%); /* Adjust for centering */
+  animation: swim 2s ease-in-out infinite;
+}
+
+@keyframes swim {
+  0% {
+      transform: translate(-50%, 0) rotate(0deg); /* Start at the center */
+  }
+  25% {
+      transform: translate(-50%, -20px) rotate(5deg); /* Move up and rotate slightly */
+  }
+  50% {
+      transform: translate(-50%, 0) rotate(0deg); /* Back to center */
+  }
+  75% {
+      transform: translate(-50%, -20px) rotate(-5deg); /* Move up and rotate back */
+  }
+  100% {
+      transform: translate(-50%, 0) rotate(0deg); /* Back to original position */
+  }
+}

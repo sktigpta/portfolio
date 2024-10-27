@@ -1,0 +1,82 @@
+/* Navbar styles */
+nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Align to the left */
+    background-color: rgba(211, 211, 211, 0); /* Slightly transparent background */
+    backdrop-filter: blur(10px); /* Apply blur effect to the background */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Logo styles */
+.nav-logo {
+    font-family: "Smooch", cursive;
+    font-size: 3em; /* Adjust logo size */
+    margin-left: 1em; /* Space from the left edge */
+    color: white;
+}
+
+/* Menu icon styles */
+.menus {
+    background-color: #ffffff; /* Background color for the menu icon */
+    border-radius: 50%; /* Rounded shape for the icon */
+    height: 1em; /* Increased height for better click area */
+    width: 1em; /* Increased width for better click area */
+    display: flex;
+    align-items: center; /* Center the icon vertically */
+    justify-content: center; /* Center the icon horizontally */
+    padding: 0.3em;
+    font-size: 2em;
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #181C14; /* Icon color */
+    margin-right: 1em; /* Space on the right */
+}
+
+/* Menu list styles */
+.menu-list {
+    position: absolute; /* Position it relative to the nav */
+    top: 10vh; /* Align with the bottom of the nav bar */
+    right: 0; /* Align to the right */
+    background-color: #ffffff; /* Background color */
+    border-radius: 8px;
+    padding: 1em 0.2em;
+    z-index: 1; /* Ensure it appears above other content */
+    margin-right: 2em;
+    width: 10em; /* Set a specific width for the menu */
+    color: #000; /* Text color for the menu */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+/* Menu list item styles */
+.menu-list ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Individual menu item styles */
+.menu-list li {
+    width: 100%; /* Full width for each menu item */
+    padding: 0.5em 0; /* Add padding for each item */
+    cursor: pointer; /* Change cursor on hover */
+    display: flex;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    border-radius: 0.2em; /* Rounded corners */
+    transition: all 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Menu item hover effect */
+.menu-list li:hover {
+    background-color: #d6d6d6; /* Change background on hover */
+}
