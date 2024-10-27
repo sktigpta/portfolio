@@ -58,7 +58,9 @@ function Skills() {
                                         <div
                                             className="progress"
                                             style={{ width: `${skill.level}%` }}
-                                        ></div>
+                                        >
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             ))}
