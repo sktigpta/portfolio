@@ -197,6 +197,29 @@ button {
     font-size: 1em;
 }
 
+.fish-animation {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+    animation: swim 2s infinite ease-in-out;
+}
+
+@keyframes swim {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 @media (max-width: 1024px) {
     .project-section {}
 }

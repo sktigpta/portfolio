@@ -16,32 +16,34 @@ function Home() {
                         <div className="profile-picture">
                             <img src={Picture1} alt="Profile of Shaktidhar" />
                         </div>
-                        
+
                         <div className="title">
                             <h1>Shaktidhar</h1>
                         </div>
 
-                        <button className='hero-btn' onClick={() => window.scrollBy({top: 200, behavior: 'smooth'})}>
+                        <button 
+                            className='hero-btn fish-animation' 
+                            onClick={() => window.scrollBy({ top: 200, behavior: 'smooth' })}
+                        >
                             <IoIosArrowDown />
                         </button>
                     </div>
                 </div>
-                
-                {/* Add different sections */}
+
                 <section id="about">
-                    <About/>
+                    <About />
                 </section>
 
                 <section id="projects">
-                    <Projects/>
+                    <Projects />
                 </section>
 
                 <section id="skills">
-                    <Skills/>
+                    <Skills />
                 </section>
 
                 <section id="contact">
-                    <Contact/>
+                    <Contact />
                 </section>
             </div>
         </>

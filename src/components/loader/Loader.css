@@ -1,40 +1,41 @@
 /* Loader.css */
+
 .loader {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Stack the items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
   height: 100vh; /* Full viewport height */
-  background: #ffffff; /* White background */
-  overflow: hidden; /* Hide overflow for the jumping effect */
-  position: relative; /* Allow absolute positioning for the fish */
+  overflow: hidden; /* Prevent scrolling during animation */
+  position: relative;
 }
 
-.fish {
-  width: 30px;
-  height: 15px;
-  background: orange;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%; /* Center the fish horizontally */
-  bottom: 50%; /* Start in the middle vertically */
-  transform: translateX(-50%); /* Adjust for centering */
+.loader h2 {
+  font-family: "Smooch", cursive;
+  margin-bottom: 20px; /* Add some space between the text and the icon */
+  color: #fff;
+}
+
+.fish-icon {
+  font-size: 50px; /* Adjust the size of the fish icon */
+  color: #697565;
   animation: swim 2s ease-in-out infinite;
 }
 
 @keyframes swim {
   0% {
-      transform: translate(-50%, 0) rotate(0deg); /* Start at the center */
+    transform: translateY(0) rotate(0deg); /* Start at the center */
   }
   25% {
-      transform: translate(-50%, -20px) rotate(5deg); /* Move up and rotate slightly */
+    transform: translateY(-20px) rotate(5deg); /* Move up and rotate slightly */
   }
   50% {
-      transform: translate(-50%, 0) rotate(0deg); /* Back to center */
+    transform: translateY(0) rotate(0deg); /* Back to center */
   }
   75% {
-      transform: translate(-50%, -20px) rotate(-5deg); /* Move up and rotate back */
+    transform: translateY(-20px) rotate(-5deg); /* Move up and rotate back */
   }
   100% {
-      transform: translate(-50%, 0) rotate(0deg); /* Back to original position */
+    transform: translateY(0) rotate(0deg); /* Back to original position */
   }
 }

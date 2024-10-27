@@ -9,8 +9,10 @@ function Contact() {
     };
 
     return (<>
-        <h1>Contact Us</h1>
-        <div className="form-placeholder">
+        <h1>Contact Me</h1>
+        <div className="form-placeholder" style={{
+            marginBottom:"1em"
+        }}>
             <p>
                 Please fill out the form below, and we'll get back to you as soon as
                 possible.
@@ -18,7 +20,7 @@ function Contact() {
             <button onClick={openGoogleForm}>
                 Contact me
             </button>
-        </div>
+        </div >
     </>
     );
 }
