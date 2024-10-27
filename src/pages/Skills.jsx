@@ -2,12 +2,12 @@
 
 import React from 'react';
 import './pages.css'; // Include your CSS
-import {
-    FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt, FaJs,
-    FaJava, FaAws, FaWordpress
+import { 
+    FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt, FaJs, 
+    FaJava, FaAws, FaWordpress 
 } from 'react-icons/fa';
-import {
-    SiMongodb, SiVisualstudiocode, SiCanva, SiMicrosoftexcel
+import { 
+    SiMongodb, SiVisualstudiocode, SiCanva, SiMicrosoftexcel 
 } from 'react-icons/si';
 
 const skillCategories = {
