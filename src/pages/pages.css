@@ -221,10 +221,47 @@ button {
 }
 
 @media (max-width: 1024px) {
-    .project-section {}
+    .skills-grid {
+        width: 100%;
+        justify-content:  space-between;
+    }
+    .skill-card{
+        width: 26%;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
+    .hero {
+        height: 90vh;
+    }
+
+    .title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title h1 {
+        margin-top: -.5em;
+        font-family: "Smooch";
+        font-size: 4em;
+        color: white;
+    }
+
+    .hero-btn {
+        margin-top: -0.1em;
+    }
+    .skills-grid {
+        width: 100%;
+        justify-content:  space-between;
+    }
+    .skill-card{
+        width: 36%;
+    }
+}
+
+@media (max-width: 400px) {
     .hero {
         height: 90vh;
     }
@@ -253,7 +290,10 @@ button {
     }
 
     .skill-card {
-        width: 35%;
+        width: 100%;
+    }
+    .skill-card p{
+        display: none;
     }
 
     .project-card {
