@@ -1,11 +1,9 @@
-/* Container for all pages */
+/* Container for All Pages */
 .pages {
     width: 90%;
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 2em; /* Added spacing between sections */
     position: relative;
 }
 
@@ -15,37 +13,30 @@
     height: 100vh;
     border-radius: 20px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-size: cover;
-    background-position: center;
 }
 
-/* Project Section */
 .project-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust based on screen size */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1em;
     width: 100%;
     margin-top: 2em;
     justify-items: center;
 }
 
-/* Round Background Section */
+/* Round Section */
 .round {
     margin-top: 10em;
     width: 100%;
     height: 200%;
     background: radial-gradient(circle, #3C3D37, #181C14 70%);
+    z-index: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 0;
 }
 
-/* Title Styling */
+/* Title Section */
 .title {
     width: 100%;
     display: flex;
@@ -58,70 +49,71 @@
     font-family: "Smooch";
     font-size: 10em;
     color: white;
-    text-align: center;
 }
 
-/* Round Section Button */
+/* Round Button */
 .round button {
-    padding: 0.5em 1em;
-    font-size: 2em;
+    padding: 0.2em 0.7em;
+    font-size: 2.5em;
     border-radius: 25px;
     border: none;
-    background-color: #697565;
     color: white;
+    background-color: #697565;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.round button:hover {
-    background-color: #5a6555;
-}
-
-/* Project Card Styling */
+/* Project Cards */
 .project-card {
     width: 100%;
     max-width: 300px;
-    border-radius: 0.5em;
     overflow: hidden;
+    border-radius: 0.5em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
 }
 
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px;
+}
+
+/* Project Item */
 .project-card .item {
     height: 40vh;
     background-color: #ECDFCC;
+    border-radius: 0.5em;
     background-size: cover;
     background-position: center;
-    border-radius: 0.5em;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    position: relative;
     transition: transform 0.3s ease;
 }
 
-/* Profile Picture (Initially Hidden) */
+/* Profile Picture */
 .profile-picture {
     display: none;
+    margin-top: -8em;
     width: 100%;
     height: 25em;
     background: #000;
     border-radius: 0.5em;
-    overflow: hidden;
 }
 
-/* Item Description */
+.profile-picture img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Project Item Description */
 .item-desc {
+    margin-left: -1em;
     padding: 0.5em;
     background: rgba(0, 0, 0, 0.6);
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
 }
 
 .item-desc h3 {
@@ -132,14 +124,8 @@
 
 .item-desc p {
     margin-top: 0.5em;
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-}
-
-/* Hover Effect for Project Card */
-.project-card:hover {
-    transform: scale(1.05);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px;
 }
 
 /* Skills Section */
@@ -147,14 +133,17 @@
     padding: 2em;
 }
 
+.skills-category {
+    margin-bottom: 2em;
+}
+
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
-    justify-content: center;
+    align-items: center;
 }
 
-/* Skill Card */
 .skill-card {
     background-color: #697565;
     padding: 1em;
@@ -169,11 +158,24 @@
     transform: scale(1.05);
 }
 
+/* Skill Header and Progress */
+.skill-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5em;
+}
+
+.skill-icon {
+    margin-right: 0.5em;
+}
+
 .progress-bar {
     background-color: #e0e0e0;
     border-radius: 0.5em;
     height: 10px;
     overflow: hidden;
+    margin-bottom: 0.5em;
 }
 
 .progress {
@@ -182,28 +184,23 @@
     border-radius: 0.5em;
 }
 
-.skill-level {
-    font-weight: bold;
-}
-
 /* Form Placeholder */
 .form-placeholder {
     padding: 5em;
     background-color: #3C3D37;
-    border-radius: 0.5em;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    border-radius: 0.5em;
     justify-content: center;
+    align-items: center;
 }
 
 button {
     margin-top: 2em;
-    padding: 1em 5em;
     border-radius: 18px;
+    padding: 1em 5em;
     border: none;
     font-size: 1em;
-    cursor: pointer;
 }
 
 /* Fish Animation */
@@ -211,79 +208,59 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
     font-size: 2rem;
-    background: transparent;
-    border: none;
+    cursor: pointer;
     animation: swim 2s infinite ease-in-out;
 }
 
 @keyframes swim {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Media Queries */
-
-/* Tablets */
 @media (max-width: 1024px) {
     .skills-grid {
-        width: 100%;
         justify-content: space-between;
     }
-
     .skill-card {
         width: 26%;
     }
 }
 
-/* Mobile Devices */
 @media (max-width: 700px) {
     .hero {
         height: 90vh;
     }
-
     .title h1 {
         font-size: 4em;
+        margin-top: -0.5em;
     }
-
     .project-section {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
-
-    .skills-grid {
-        justify-content: space-around;
-    }
-
     .skill-card {
         width: 36%;
     }
 }
 
-/* Small Phones */
 @media (max-width: 400px) {
-    .title h1 {
-        font-size: 3em;
-    }
-
     .project-section {
         grid-template-columns: 1fr;
     }
-
     .skill-card {
         width: 100%;
     }
-
     .skill-card p {
         display: none;
     }
-
     .profile-picture {
-        display: block;
-    }
-
-    .profile-picture img {
-        width: 100%;
-        object-fit: cover;
+        display: flex;
+        margin-top: -4em;
     }
 }
