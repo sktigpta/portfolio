@@ -98,6 +98,7 @@
     height: 25em;
     background: #000;
     border-radius: 0.5em;
+    overflow: hidden;
 }
 
 .profile-picture img {
@@ -246,6 +247,10 @@ button {
     }
     .skill-card {
         width: 36%;
+    }
+    .profile-picture {
+        display: flex;
+        margin-top: -2em;
     }
 }
 
