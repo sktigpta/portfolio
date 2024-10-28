@@ -1,39 +1,51 @@
 /* Container for all pages */
 .pages {
     width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    gap: 2em; /* Added spacing between sections */
     position: relative;
 }
 
+/* Hero Section */
 .hero {
     width: 100%;
     height: 100vh;
     border-radius: 20px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
 }
 
+/* Project Section */
 .project-section {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust based on screen size */
     gap: 1em;
     width: 100%;
     margin-top: 2em;
     justify-items: center;
 }
 
+/* Round Background Section */
 .round {
     margin-top: 10em;
     width: 100%;
     height: 200%;
     background: radial-gradient(circle, #3C3D37, #181C14 70%);
-    z-index: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 0;
 }
 
+/* Title Styling */
 .title {
     width: 100%;
     display: flex;
@@ -46,62 +58,70 @@
     font-family: "Smooch";
     font-size: 10em;
     color: white;
+    text-align: center;
 }
 
+/* Round Section Button */
 .round button {
-    padding: .2em .7em;
-    font-size: 2.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0.5em 1em;
+    font-size: 2em;
     border-radius: 25px;
     border: none;
-    color: white;
     background-color: #697565;
+    color: white;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+.round button:hover {
+    background-color: #5a6555;
+}
+
+/* Project Card Styling */
 .project-card {
     width: 100%;
     max-width: 300px;
-    overflow: hidden;
     border-radius: 0.5em;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
 }
 
 .project-card .item {
-    border-radius: 0.5em;
     height: 40vh;
     background-color: #ECDFCC;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background-size: cover;
     background-position: center;
+    border-radius: 0.5em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    color: white;
-    position: relative;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease;
 }
 
+/* Profile Picture (Initially Hidden) */
 .profile-picture {
     display: none;
-    margin-top: -8em;
     width: 100%;
     height: 25em;
     background: #000;
     border-radius: 0.5em;
+    overflow: hidden;
 }
 
+/* Item Description */
 .item-desc {
-    margin: 0 0 0 -1em;
     padding: 0.5em;
     background: rgba(0, 0, 0, 0.6);
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
 }
 
 .item-desc h3 {
@@ -112,30 +132,29 @@
 
 .item-desc p {
     margin-top: 0.5em;
-    font-size: .8em;
+    font-size: 0.9em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
+/* Hover Effect for Project Card */
 .project-card:hover {
     transform: scale(1.05);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px;
 }
 
+/* Skills Section */
 .skills-container {
     padding: 2em;
-}
-
-.skills-category {
-    margin-bottom: 2em;
 }
 
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
-    align-items: center;
+    justify-content: center;
 }
 
+/* Skill Card */
 .skill-card {
     background-color: #697565;
     padding: 1em;
@@ -150,23 +169,11 @@
     transform: scale(1.05);
 }
 
-.skill-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.5em;
-}
-
-.skill-icon {
-    margin-right: 0.5em;
-}
-
 .progress-bar {
     background-color: #e0e0e0;
     border-radius: 0.5em;
     height: 10px;
     overflow: hidden;
-    margin-bottom: 0.5em;
 }
 
 .progress {
@@ -179,140 +186,103 @@
     font-weight: bold;
 }
 
+/* Form Placeholder */
 .form-placeholder {
     padding: 5em;
     background-color: #3C3D37;
+    border-radius: 0.5em;
     display: flex;
     flex-direction: column;
-    border-radius: 0.5em;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 button {
     margin-top: 2em;
-    border-radius: 18px;
     padding: 1em 5em;
+    border-radius: 18px;
     border: none;
     font-size: 1em;
+    cursor: pointer;
 }
 
+/* Fish Animation */
 .fish-animation {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: none;
-    background-color: transparent;
     font-size: 2rem;
-    cursor: pointer;
+    background: transparent;
+    border: none;
     animation: swim 2s infinite ease-in-out;
 }
 
 @keyframes swim {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 
+/* Media Queries */
+
+/* Tablets */
 @media (max-width: 1024px) {
     .skills-grid {
         width: 100%;
-        justify-content:  space-between;
+        justify-content: space-between;
     }
-    .skill-card{
+
+    .skill-card {
         width: 26%;
     }
-    
 }
 
+/* Mobile Devices */
 @media (max-width: 700px) {
     .hero {
         height: 90vh;
     }
 
-    .title {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
     .title h1 {
-        margin-top: -.5em;
-        font-family: "Smooch";
         font-size: 4em;
-        color: white;
-    }
-    .project-section {
-        width: 100%;
-        grid-template-columns: 2fr;
     }
 
-    .hero-btn {
-        margin-top: -0.1em;
+    .project-section {
+        grid-template-columns: 1fr;
     }
+
     .skills-grid {
-        width: 100%;
-        justify-content:  space-between;
+        justify-content: space-around;
     }
-    .skill-card{
+
+    .skill-card {
         width: 36%;
     }
 }
 
+/* Small Phones */
 @media (max-width: 400px) {
-    .hero {
-        height: 90vh;
-    }
-
-    .title {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
     .title h1 {
-        margin-top: -.5em;
-        font-family: "Smooch";
-        font-size: 4em;
-        color: white;
-    }
-
-    .hero-btn {
-        margin-top: -0.1em;
+        font-size: 3em;
     }
 
     .project-section {
-        width: 100%;
         grid-template-columns: 1fr;
     }
 
     .skill-card {
         width: 100%;
     }
-    .skill-card p{
+
+    .skill-card p {
         display: none;
     }
 
-    .project-card {
-        min-width: 100%;
-    }
-
     .profile-picture {
-        display: flex;
-        overflow: hidden;
-        margin-top: -4em;
+        display: block;
     }
 
     .profile-picture img {
-        display: flex;
         width: 100%;
         object-fit: cover;
     }
