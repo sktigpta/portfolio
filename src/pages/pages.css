@@ -228,6 +228,7 @@ button {
     .skill-card{
         width: 26%;
     }
+    
 }
 
 @media (max-width: 700px) {
@@ -247,6 +248,10 @@ button {
         font-family: "Smooch";
         font-size: 4em;
         color: white;
+    }
+    .project-section {
+        width: 100%;
+        grid-template-columns: 2fr;
     }
 
     .hero-btn {
