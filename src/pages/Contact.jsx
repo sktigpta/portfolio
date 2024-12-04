@@ -32,10 +32,10 @@ function Contact() {
                     <a className="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/sktigpta?trk=profile-badge" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin size={40} color="#0077B5" />
                     </a>
-                    <a href="https://twitter.com/your_twitter_handle" target="_blank" rel="noopener noreferrer">
+                    <a href="https://twitter.com/sktigpta" target="_blank" rel="noopener noreferrer">
                         <FaTwitter size={40} color="#1DA1F2" />
                     </a>
-                    <a href="https://instagram.com/your_instagram_handle" target="_blank" rel="noopener noreferrer">
+                    <a href="https://instagram.com/sktigpta" target="_blank" rel="noopener noreferrer">
                         <FaInstagram size={40} color="#E1306C" />
                     </a>
                 </div>
