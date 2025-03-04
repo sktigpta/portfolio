@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-black border-t-4 border-pixel-green py-6">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="text-pixel-green text-xl font-pixel mb-4 md:mb-0">SHAKTIDHAR.DEV</div>
+          <div className="text-pixel-green text-xl font-pixel mb-4 md:mb-0">Shakti</div>
           <div className="flex space-x-4">
             <a href="mailto:sktigpta@gmail.com" className="text-white hover:text-pixel-green">
               <Mail className="w-5 h-5" />
